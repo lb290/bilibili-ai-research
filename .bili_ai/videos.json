@@ -12,5 +12,19 @@
     "source": "https://example.com",
     "uploaded_at": "2026-10-21T23:01:23.634430",
     "status": "published"
+  },
+  {
+    "bv_id": "BV20261021230458",
+    "title": "AI 如何改变我们的生活",
+    "file": "output/demo.mp4",
+    "tags": [
+      "AI",
+      "科技",
+      "科普"
+    ],
+    "description": "本视频由 AI 辅助生成",
+    "source": "https://example.com",
+    "uploaded_at": "2026-10-21T23:04:58.010616",
+    "status": "published"
   }
 ]
