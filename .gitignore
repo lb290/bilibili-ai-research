@@ -1,0 +1,89 @@
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 凭证
+*.pem
+*.key
+credentials.json
+cookies.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# 视频文件（大文件用 Git LFS）
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.m4a
+*.wav
+*.flac
+
+# 图片素材
+*.psd
+*.ai
+*.sketch
+
+# 数据
+*.db
+*.sqlite3
+*.json.bak
+
+# 日志
+*.log
+audit.log
+
+# 临时文件
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# 输出
+output/
+out/
+build/
+dist/
+render/
+
+# 敏感配置
+config/persona.json
+config/wordlist.txt
