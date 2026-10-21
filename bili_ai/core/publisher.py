@@ -12,8 +12,10 @@ class Publisher:
     """管理视频投稿和数据"""
     
     def __init__(self):
+        # 使用当前目录作为配置路径
+        self.config_dir = Path.cwd() / ".bili_ai"
+        self.data_file = self.config_dir / "videos.json"
         self.uploaded_videos = []
-        self.data_file = Path.home() / ".config" / "bili_ai" / "videos.json"
         self._load_data()
     
     def _load_data(self):

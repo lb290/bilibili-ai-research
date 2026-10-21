@@ -42,7 +42,9 @@ class PersonaManager:
     def __init__(self, persona_path=None):
         self.data = self.DEFAULT_PERSONA.copy()
         self.memory = []  # 对话记忆
-        self.memory_file = Path.home() / ".config" / "bili_ai" / "memory.json"
+        # 使用当前目录作为配置路径
+        self.config_dir = Path.cwd() / ".bili_ai"
+        self.memory_file = self.config_dir / "memory.json"
         
         if persona_path:
             self.load(persona_path)
@@ -69,7 +71,7 @@ class PersonaManager:
     def save(self, path=None):
         """保存人设"""
         if path is None:
-            path = Path.home() / ".config" / "bili_ai" / "persona.json"
+            path = self.config_dir / "persona.json"
         
         path.parent.mkdir(parents=True, exist_ok=True)
         with open(path, 'w', encoding='utf-8') as f:

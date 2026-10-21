@@ -80,6 +80,13 @@ def demo_publisher():
     
     publisher = Publisher()
     
+    # 先创建一个模拟视频文件
+    output_dir = Path("output")
+    output_dir.mkdir(exist_ok=True)
+    demo_file = output_dir / "demo.mp4"
+    if not demo_file.exists():
+        demo_file.touch()  # 创建空文件
+    
     # 投稿视频
     print("\n📤 投稿视频:")
     result = publisher.upload(

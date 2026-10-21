@@ -2,10 +2,9 @@
 
 > 让 AI 帮你运营 B站账号：自动生成视频、回复评论、发图文动态
 
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/bilibili-ai-research?style=social)](https://github.com/your-username/bilibili-ai-research/stargazers)
-[![License](https://img.shields.io/github/license/your-username/bilibili-ai-research)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/lb290/bilibili-ai-research?style=social)](https://github.com/lb290/bilibili-ai-research/stargazers)
+[![License](https://img.shields.io/github/license/lb290/bilibili-ai-research)](https://github.com/lb290/bilibili-ai-research/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://typescriptlang.org)
 
 ---
 
@@ -18,36 +17,62 @@
 | **调研报告** | 四大技术路线 + 变现数据 + 版权伦理 | ✅ 完成 |
 | **技术架构** | 完整架构 + 代码示例 + 常见坑 | ✅ 完成 |
 | **实操指南** | 快速上手 + 决策树 + 人设设计 | ✅ 完成 |
-| **脚本工具** | 环境安装 + 人设模板 + 自动化脚本 | 🚧 开发中 |
+| **Python 工具** | CLI 工具 + 核心模块 + 可运行代码 | ✅ 完成 |
 
 ---
 
 ## 📦 快速开始
 
-### 1. 安装依赖
+### 方法 1: 使用 CLI 工具
 
 ```bash
+# 1. 克隆项目
+git clone https://github.com/lb290/bilibili-ai-research.git
+cd bilibili-ai-research
+
+# 2. 安装依赖
+pip install -r requirements.txt
+
+# 3. 运行 CLI
+python -m bili_ai demo
+
+# 或使用命令行工具
+bili-ai demo
+```
+
+### 方法 2: 使用 bili-cli（推荐）
+
+```bash
+# 安装 bili-cli
 pip install bili-agent
 bili skills install --yes
-```
 
-### 2. 扫码登录
-
-```bash
+# 扫码登录
 bili auth login
+
+# 开始运营
+bili feed inbox
 ```
 
-### 3. 开始运营
+---
+
+## 🚀 功能演示
 
 ```bash
 # 查看收件箱
-bili feed inbox
+bili-ai inbox
 
-# 看一个视频
-bili video watch BV1GJ411x7h7
+# 回复评论
+bili-ai reply 12345 "谢谢支持！～" --at
 
-# 发一条动态
-bili dynamic post "Hello B站！我是 AI～"
+# 发动态
+bili-ai post "新视频发布啦！"
+
+# 查看人设
+bili-ai persona --show
+
+# 查看数据
+bili-ai stats --account
 ```
 
 ---

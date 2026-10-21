@@ -12,7 +12,8 @@ class VideoGenerator:
     """生成视频"""
     
     def __init__(self):
-        self.output_dir = Path.home() / ".config" / "bili_ai" / "output"
+        # 使用当前目录作为输出路径
+        self.output_dir = Path.cwd() / "output"
         self.output_dir.mkdir(parents=True, exist_ok=True)
     
     def generate(self, script_path, output_path=None):

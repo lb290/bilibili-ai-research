@@ -18,7 +18,9 @@ class Interactor:
             "dm": {"interval": 10, "last": 0},
             "dynamic": {"interval": 60, "last": 0}
         }
-        self.audit_log = Path.home() / ".config" / "bili_ai" / "audit.log"
+        # 使用当前目录作为配置路径
+        self.config_dir = Path.cwd() / ".bili_ai"
+        self.audit_log = self.config_dir / "audit.log"
         
     def check_inbox(self, unreplied=False):
         """
