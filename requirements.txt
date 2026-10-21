@@ -1,0 +1,30 @@
+# B站 AI 自动运营 - Python 依赖
+# 安装: pip install -r requirements.txt
+
+# 核心依赖
+bili-agent>=1.0.0
+
+# LLM 调用
+openai>=1.0.0
+
+# TTS
+edge-tts>=7.0.0
+
+# 数据处理
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+
+# 网络
+aiohttp>=3.9.0
+httpx>=0.26.0
+
+# 工具
+click>=8.0.0
+rich>=13.0.0  # 美化输出
+
+# 可选：视频处理
+# ffmpeg-python>=0.2.0
+# remotion (Node.js 环境)
+
+# 可选：浏览器自动化
+# playwright>=1.40.0
